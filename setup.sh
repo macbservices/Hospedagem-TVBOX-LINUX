@@ -35,7 +35,7 @@ read -p "Digite seu domínio (exemplo: eletronica.damascenodigitaltech.com.br): 
 cloudflared tunnel create $NOME_TUNEL
 
 # Capturar arquivo de credenciais
-ARQUIVO_CREDENCIAIS=$(ls ~/.cloudflared/${NOME_TUNEL}*.json)
+ARQUIVO_CREDENCIAIS=$(ls ~/.cloudflared/*.json | head -n 1)
 if [ -z "$ARQUIVO_CREDENCIAIS" ]; then
   echo "Erro: arquivo de credenciais não encontrado. Saindo."
   exit 1
