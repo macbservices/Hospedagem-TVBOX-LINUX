@@ -1,3 +1,3 @@
 # Hospedagem-TVBOX-LINUX
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/macbservices/Hospedagem-TVBOX-LINUX/main/setup.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/seuusuario/seurepositorio/main/setup.sh)
