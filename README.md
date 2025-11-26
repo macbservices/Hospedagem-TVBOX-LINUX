@@ -7,7 +7,7 @@ Este projeto automatiza a instalação de um servidor web Apache e configura um 
 No seu TV box, basta rodar o comando abaixo para baixar e executar o script de instalação automática:
 
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/seuusuario/seurepositorio/main/setup.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/macbservices/Hospedagem-TVBOX-LINUX/main/setup.sh)
 
 
 O script irá:
