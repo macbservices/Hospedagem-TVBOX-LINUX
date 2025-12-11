@@ -2,16 +2,23 @@
 
 echo "Iniciando configuração completa do servidor web e Cloudflare Tunnel..."
 
-# Atualizar sistema e instalar Apache
+# Atualizar sistema e instalar Apache + PHP Completo + SQLite3 + MySQL
 sudo apt update && sudo apt upgrade -y
-sudo apt install apache2 -y
-sudo systemctl start apache2
-sudo systemctl enable apache2
+sudo apt install -y apache2 php libapache2-mod-php php-mysql php-curl php-json php-mbstring php7.4-sqlite3 php-sqlite3 mariadb-server
+sudo a2enmod rewrite headers ssl
+sudo systemctl restart apache2
 
-echo "Apache instalado e iniciado."
+echo "Apache + PHP + SQLite3 + MySQL instalados e configurados."
+
+# Configurar MySQL (interativo)
+echo "Configurando MySQL seguro... (responda as perguntas abaixo)"
+sudo mysql_secure_installation
+
+echo "Apache/PHP/SQLite3/MySQL pronto!"
 echo "Coloque seus arquivos web em '/var/www/html/'. Exemplo de comando para copiar arquivos:"
 echo "sudo cp -r /caminho/do/seu/site/* /var/www/html/"
-echo "Você pode editar o arquivo /var/www/html/index.html para criar sua página inicial."
+echo "sudo chown -R www-data:www-data /var/www/html/"
+echo "sudo chmod -R 755 /var/www/html/"
 
 # Instalar cloudflared (Cloudflare Tunnel)
 sudo mkdir -p /usr/share/keyrings
@@ -61,5 +68,8 @@ sudo cloudflared service install
 sudo systemctl enable cloudflared
 sudo systemctl start cloudflared
 
-echo "Configuração concluída! Seu site estará disponível em http://$DOMINIO"
-echo "Lembre-se de colocar seus arquivos web em /var/www/html/ no seu TV box."
+echo "✅ Configuração COMPLETA concluída!"
+echo "🌐 Seu site estará disponível em http://$DOMINIO"
+echo "📁 Coloque arquivos em /var/www/html/ e teste com:"
+echo "curl -I http://localhost"
+echo "php -m | grep sqlite"
