@@ -10,6 +10,11 @@ No seu TV box, basta rodar o comando abaixo para baixar e executar o script de i
 bash <(curl -sSL https://raw.githubusercontent.com/macbservices/Hospedagem-TVBOX-LINUX/main/setup.sh)
 
 
+```bash
+bash <(curl -sSL https://raw.githubusercontent.com/macbservices/Hospedagem-TVBOX-LINUX/main/phpmyadmin.sh)
+
+
+
 O script irá:
 
 - Atualizar o sistema e instalar Apache
