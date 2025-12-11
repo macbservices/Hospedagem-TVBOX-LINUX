@@ -60,5 +60,4 @@ https://github.com/macbservices/Hospedagem-TVBOX-LINUX
 Caso tenha dúvidas, abra uma issue no repositório.
 
 
-```bash
 bash <(curl -sSL https://raw.githubusercontent.com/macbservices/Hospedagem-TVBOX-LINUX/main/phpmyadmin.sh)
