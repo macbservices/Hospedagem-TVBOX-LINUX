@@ -61,3 +61,6 @@ Caso tenha dúvidas, abra uma issue no repositório.
 
 
 bash <(curl -sSL https://raw.githubusercontent.com/macbservices/Hospedagem-TVBOX-LINUX/main/phpmyadmin.sh)
+
+
+bash <(curl -sSL https://raw.githubusercontent.com/macbservices/Hospedagem-TVBOX-LINUX/main/cloudflare.sh)
