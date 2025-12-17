@@ -35,8 +35,8 @@ cloudflared tunnel login
 read -p "Pressione Enter após autenticar no navegador..."
 
 # Receber nome do túnel e domínio
-read -p "Digite o nome do túnel (exemplo: site-damasceno): " NOME_TUNEL
-read -p "Digite seu domínio (exemplo: eletronica.damascenodigitaltech.com.br): " DOMINIO
+read -p "Digite o nome do túnel (exemplo: macb-tools): " NOME_TUNEL
+read -p "Digite seu domínio (exemplo: macbtools.grythprogress.com.br): " DOMINIO
 
 # Criar túnel
 cloudflared tunnel create $NOME_TUNEL
